@@ -1,0 +1,198 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>12 Card Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+    }
+    .card h2 {
+      margin-top: 10px;
+      color: #333;
+      font-size: 1.4em;
+    }
+    .card-details {
+      display: none;
+      margin-top: 15px;
+      color: #666;
+      line-height: 1.6;
+    }
+    .card-icon {
+      font-size: 2em;
+      color: #4a69bd;
+      margin-bottom: 10px;
+    }
+
+    .responsive-button {
+    padding: 15px 30px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.responsive-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .responsive-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+    
+  </style>
+</head>
+
+<body>
+  <div class="card-container">
+    <div class="card" onclick="toggleDetails(this)">
+      <div class="card-icon">📚</div>
+      <h2>Card 1</h2>
+      <div class="card-details">
+        <p>Details for Card 1. This card represents knowledge and learning. Click again to hide.</p>
+        <button class="responsive-button">Details</button>
+      </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+      <div class="card-icon">💡</div>
+      <h2>Card 2</h2>
+      <div class="card-details">
+        <p>Details for Card 2. This card symbolizes ideas and innovation. Click again to hide.</p>
+        <button class="responsive-button">Details</button>
+      </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+      <div class="card-icon">🌿</div>
+      <h2>Card 3</h2>
+      <div class="card-details">
+        <p>Details for Card 3. This card represents growth and nature. Click again to hide.</p>
+        <button class="responsive-button">Details</button>
+      </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+      <div class="card-icon">🎨</div>
+      <h2>Card 4</h2>
+      <div class="card-details">
+        <p>Details for Card 4. This card symbolizes creativity and art. Click again to hide.</p>
+        <button class="responsive-button">Details</button>
+      </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+      <div class="card-icon">🔬</div>
+      <h2>Card 5</h2>
+      <div class="card-details">
+        <p>Details for Card 5. This card represents science and discovery. Click again to hide.</p>
+        <button class="responsive-button">Details</button>
+      </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+      <div class="card-icon">🏆</div>
+      <h2>Card 6</h2>
+      <div class="card-details">
+        <p>Details for Card 6. This card symbolizes achievement and success. Click again to hide.</p>
+        <button class="responsive-button">Details</button>
+      </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+      <div class="card-icon">🌍</div>
+      <h2>Card 7</h2>
+      <div class="card-details">
+        <p>Details for Card 7. This card represents global awareness and travel. Click again to hide.</p>
+        <button class="responsive-button">Details</button>
+      </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+      <div class="card-icon">🤝</div>
+      <h2>Card 8</h2>
+      <div class="card-details">
+        <p>Details for Card 8. This card symbolizes partnership and cooperation. Click again to hide.</p>
+        <button class="responsive-button">Details</button>
+      </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+      <div class="card-icon">🚀</div>
+      <h2>Card 9</h2>
+      <div class="card-details">
+        <p>Details for Card 9. This card represents progress and ambition. Click again to hide.</p>
+        <button class="responsive-button">Details</button>
+      </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+      <div class="card-icon">🎵</div>
+      <h2>Card 10</h2>
+      <div class="card-details">
+        <p>Details for Card 10. This card symbolizes music and harmony. Click again to hide.</p>
+        <button class="responsive-button">Details</button>
+      </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+      <div class="card-icon">⚖️</div>
+      <h2>Card 11</h2>
+      <div class="card-details">
+        <p>Details for Card 11. This card represents balance and justice. Click again to hide.</p>
+        <button class="responsive-button">Details</button>
+      </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+      <div class="card-icon">🔗</div>
+      <h2>Card 12</h2>
+      <div class="card-details">
+        <p>Details for Card 12. This card symbolizes connections and networks. Click again to hide.</p>
+        <button class="responsive-button">Details</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleDetails(card) {
+      const details = card.querySelector('.card-details');
+      if (details.style.display === 'none' || details.style.display === '') {
+        details.style.display = 'block';
+      } else {
+        details.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+
+</html>
